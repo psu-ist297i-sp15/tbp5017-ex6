@@ -4,8 +4,8 @@
       <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
 
       <ul>
-      <% @topic.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
