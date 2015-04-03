@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320185707) do
+ActiveRecord::Schema.define(version: 20150320011650) do
 
-  create_table "songs", force: true do |t|
+  create_table "topics", force: :cascade do |t|
     t.string   "title"
-    t.string   "album"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "votes", force: true do |t|
+  create_table "votes", force: :cascade do |t|
     t.integer  "topic_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
